@@ -9,7 +9,11 @@ app.use(cors(options))
 app.use(express.json())
 
 app.get('/', (req: Request, res: Response) => {
-  res.json({ message: "Hello from server!" });
+  res.json({ message: "Beagle Bone Leds" });
+});
+
+app.get('/execCommand', (req: Request, res: Response) => {
+  console.log("endpoint called")
 });
 
 app.listen(SERVER_PORT, () => {
